@@ -12,7 +12,7 @@ fn main() {
     for _ in 0..test_case_count {
         let mut line = String::new();
         io::stdin().read_line(&mut line).unwrap();
-        let mut iter = line.trim().split(' ').flat_map(|x| x.parse::<i32>());
+        let mut iter = line.trim().split(' ').flat_map(&str::parse::<i32>);
         let x1 = iter.next().unwrap();
         let y1 = iter.next().unwrap();
         let x2 = iter.next().unwrap();
@@ -24,7 +24,7 @@ fn main() {
         for _ in 0..circle_count {
             let mut line = String::new();
             io::stdin().read_line(&mut line).unwrap();
-            let mut iter = line.trim().split(' ').flat_map(|x| x.parse::<i32>());
+            let mut iter = line.trim().split(' ').flat_map(&str::parse::<i32>);
             let x = iter.next().unwrap();
             let y = iter.next().unwrap();
             let r = iter.next().unwrap();
